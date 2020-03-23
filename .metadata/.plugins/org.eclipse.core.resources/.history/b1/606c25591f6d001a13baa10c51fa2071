@@ -22,13 +22,7 @@ public class WebServiceConfig {
 	ServletRegistrationBean messageDispatcherServlet(ApplicationContext context)
 	{
 		// map messageDispatcherServlet to url => /ws/*
-		MessageDispatcherServlet messageDispatcherServlet = new MessageDispatcherServlet();
-		// connect messageDispatcherServlet to our application context package and contents location
-		messageDispatcherServlet.setApplicationContext(context);
-		// setting transform for WSDL locations
-		messageDispatcherServlet.setTransformWsdlLocations(true);
-		
-		
-		return new ServletRegistrationBean(messageDispatcherServlet, "/ws/*");
+		MessageDispatcherServlet messageDispatcherServelet = new MessageDispatcherServlet();
+		new ServletRegistrationBean()
 	}
 }
