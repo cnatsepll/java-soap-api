@@ -1,0 +1,10 @@
+package com.in28minutes.springboot.basics.spingbootin10steps;
+
+public class Book {
+	long id;
+	String name;
+	String author;
+	
+	
+	
+}

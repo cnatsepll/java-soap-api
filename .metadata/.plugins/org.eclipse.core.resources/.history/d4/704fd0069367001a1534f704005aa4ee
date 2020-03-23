@@ -1,0 +1,27 @@
+package com.in28minutes.spring.basics.spingin5steps;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpingIn5StepsApplication {
+	
+	// what are the beans that spring has to manage
+	// what are the dependencies that the beans have to manage
+	// where to search for the beans
+	
+
+
+	public static void main(String[] args) {
+		BinarySearchImpl binarySearch = 
+				new BinarySearchImpl(new QuickSortAlgorithm());
+
+		int result = binarySearch.binarySearch(new int[] {12,  4, 6}, 3);
+		System.out.println(result);
+		
+		
+		
+		// SpringApplication.run(SpingIn5StepsApplication.class, args);
+	}
+
+}

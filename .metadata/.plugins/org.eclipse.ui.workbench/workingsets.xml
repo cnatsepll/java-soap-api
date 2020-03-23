@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583932781123_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583932781131_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1584122961146_3" label="sping-in-5-steps" name="sping-in-5-steps">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sping-in-5-steps" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1584390115717_4" label="spingboot-in-10-steps" name="spingboot-in-10-steps">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spingboot-in-10-steps" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583932792426_2" label="Window Working Set" name="Aggregate for window 1583932792426"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1584393513422_5" label="Window Working Set" name="Aggregate for window 1584393513422"/>
+</workingSetManager>

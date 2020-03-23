@@ -1,0 +1,14 @@
+package com.in28minutes.soap.webservices.soapcoursemanagement.soap;
+
+public class CourseDetailsEndpoint {
+
+	
+	// method
+	// input - GetCourseDetailsRequest
+	// output - GetCourseDetailsResponse
+	
+	
+	
+	
+	
+}

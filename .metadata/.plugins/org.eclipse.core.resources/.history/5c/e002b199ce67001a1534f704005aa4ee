@@ -1,0 +1,13 @@
+package com.in28minutes.springboot.basics.spingbootin10steps;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpingbootIn10StepsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpingbootIn10StepsApplication.class, args);
+	}
+
+}
