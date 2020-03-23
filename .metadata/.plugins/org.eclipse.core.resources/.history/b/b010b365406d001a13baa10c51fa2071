@@ -4,12 +4,8 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
-import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
-import org.springframework.xml.xsd.SimpleXsdSchema;
-import org.springframework.xml.xsd.XsdSchema;
 
 // enable spring web services
 @EnableWs
@@ -21,7 +17,7 @@ public class WebServiceConfig {
 	// url => /ws/*
 	
 	
-	// the following method describes a spring bean
+	
 	@Bean
 	ServletRegistrationBean messageDispatcherServlet(ApplicationContext context)
 	{
@@ -38,31 +34,6 @@ public class WebServiceConfig {
 	
 	// spring creates a wsdl for us we just have to configure it
 	// web service definition language - defines functionality offered by service
-	
-	
-	@Bean(name="courses")
-	// creates a bean and autowires the coursesSchema as a dependency 
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema coursesSchema) {
-		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
-		// URI - "/ws"  (from => /ws/courses.wsdl)
-		// Schema - coursesSchema
-		// PortType - CoursePort
-		// Namespace - "http://in28minutes.com/courses"
-		// course-details.xsd => value stored and parsed in XsdSchema Bean (coursesSchema)
-		// setting definition values (port type, namespace, uri, schema)
-		definition.setPortTypeName("CoursePort");
-		definition.setTargetNamespace("http://in28minutes.com/courses");
-		definition.setLocationUri("/ws");
-		definition.setSchema(coursesSchema);
-		return definition;
-	}
-	
-	
-	@Bean
-	XsdSchema coursesSchema() {
-		// course-details.xsd is in our src/main/resources folder
-		return new SimpleXsdSchema(new ClassPathResource("course-details.xsd"));
-	}
 	
 	
 }

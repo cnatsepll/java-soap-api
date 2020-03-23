@@ -1,0 +1,39 @@
+package com.in28minutes.soap.webservices.soapcoursemanagement.soap;
+
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.ws.config.annotation.EnableWs;
+import org.springframework.ws.transport.http.MessageDispatcherServlet;
+
+// enable spring web services
+@EnableWs
+// spring configuration
+@Configuration
+public class WebServiceConfig {
+	// message dispatcher servlet
+		// application context
+	// url => /ws/*
+	
+	
+	
+	@Bean
+	ServletRegistrationBean messageDispatcherServlet(ApplicationContext context)
+	{
+		// map messageDispatcherServlet to url => /ws/*
+		MessageDispatcherServlet messageDispatcherServlet = new MessageDispatcherServlet();
+		// connect messageDispatcherServlet to our application context package and contents location
+		messageDispatcherServlet.setApplicationContext(context);
+		// setting transform for WSDL locations
+		messageDispatcherServlet.setTransformWsdlLocations(true);
+		
+		
+		return new ServletRegistrationBean(messageDispatcherServlet, "/ws/*");
+	}
+	
+	// spring creates a wsdl for us we just have to configure it
+	// web service definition 
+	
+	
+}
